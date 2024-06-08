@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "An unofficial library to embed and send optimization (QUBO, Ising) problems to DWave System quantum annealing solvers.",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts", 
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
@@ -25,6 +25,9 @@
   },
   "homepage": "https://github.com/Totemi1324/qubo-embedder#readme",
   "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.4",
     "typescript": "^5.4.5"
   }
 }
