@@ -65,7 +65,6 @@ describe('SolutionRecord', () => {
     const vector = SolutionVector.fromList([1, 0, 1]);
     record.addEntry(10.0, vector, 1);
     const expectedString = "   energy\tsample\toccurrences\n(1) 10\t[q0: 1, q1: 0, q2: 1, ]\tx1\n";
-    console.log(record.toString());
     expect(record.toString()).toBe(expectedString);
   });
 });

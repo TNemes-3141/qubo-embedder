@@ -1,4 +1,4 @@
-//export * from './solver';
+export * from './solver';
 export * from './qubo';
 export * from './math';
 export * from './solution_record';
