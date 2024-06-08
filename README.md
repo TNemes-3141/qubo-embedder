@@ -129,15 +129,17 @@ qubo.addEntry(0, 0, 2.0);
 qubo.addEntry(1, 1, 2.0);
 qubo.addEntry(0, 1, -2.0);
 
-Solver.simulator().sampleQubo(qubo, 5).then(solutionRecord => {
+Solver.simulator().sampleQubo(qubo).then(solutionRecord => {
     for (const entry of solutionRecord.entries()) {
         console.log(`E=${entry.energy}\t${entry.solutionVector}\tx${entry.numOccurrences}`);
     } 
-    // E=-2.0    [q0: 0, q1: 1]    x1
+    //E=0     [q0: 0, q1: 0, ]        x1
+    //E=2     [q0: 0, q1: 1, ]        x1
 
     console.log(solutionRecord.toString());
-    //   energy    sample    occurrences
-    // (1) -2.0    [q0: 0, q1: 1]    x1
+    //   energy       sample  occurrences
+    //(1) 0   [q0: 0, q1: 0, ]        x1
+    //(2) 2   [q0: 0, q1: 1, ]        x1
 });
 
 ```
