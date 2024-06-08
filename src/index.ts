@@ -1,7 +1,7 @@
 //export * from './solver';
-//export * from './qubo';
-//export * from './math';
-//export * from './solution_record';
+export * from './qubo';
+export * from './math';
+export * from './solution_record';
 export * from './exceptions';
 export * from "./types";
 
