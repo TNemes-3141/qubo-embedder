@@ -108,7 +108,7 @@ console.log(hamiltonian.matrix); // [[2.0, -2.0], [0.0, 2.0]]
 This type you seldom have to create for yourself, but is used by the solvers to return the solutions to a QUBO problem. A solution vector is immutable, but can be transformed into a regular list.
 
 ``` typescript
-import { SolutionVector } from 'qubo_embedder';
+import { SolutionVector } from 'qubo-embedder';
 
 const solutionVector = SolutionVector.fromList([0, 1]);
 
@@ -122,7 +122,7 @@ console.log(solutionVector.toString()); // [q0: 0, q1: 1]
 Sampler store their solutions as entries in this record, which you can get by `entries()` and iterate over for solution details. When returned by a sampler, the entries are sorted by energy in ascending order.
 
 ``` typescript
-import { Qubo, Solver, SolutionRecord } from 'qubo_embedder';
+import { Qubo, Solver, SolutionRecord } from 'qubo-embedder';
 
 const qubo = new Qubo(2);
 qubo.addEntry(0, 0, 2.0);
